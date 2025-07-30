@@ -25,6 +25,7 @@ from sklearn.exceptions import ConvergenceWarning
 
 def display_advanced_analytics(data):
     st.subheader("Advanced Analytical Features")
+    st.markdown("📌 Please discard all selections from **Local Filters** before Analysis ")
 
     numeric_columns = data.select_dtypes(include=np.number).columns.tolist()
     categorical_columns = data.select_dtypes(include=['object', 'category']).columns.tolist()
@@ -56,7 +57,7 @@ def display_advanced_analytics(data):
                 help="Select the proportion of the dataset to hold out for testing the models."
             )
             k_folds = None
-        st.write("📌 Don't select Primary Keys(eg. Customer_ID, Product Id etc..) as Feature")    
+        st.markdown("📌 Don't select Primary Keys(eg. Customer_ID, Product Id etc..) as Feature")    
 
         analysis_methods = st.multiselect(
             "Choose analysis methods to perform:",
