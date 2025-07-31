@@ -4,6 +4,7 @@ from components.overview import display_data_overview
 from components.cleaning import display_cleaning
 from components.visualization import display_visualizations
 from components.analysis import display_advanced_analytics
+from components.time_series import display_time_series_analysis
 
 st.set_page_config(
     page_title="Data Spectra",
@@ -52,6 +53,7 @@ if uploaded_file is not None:
         display_cleaning()
         filtered_data = display_visualizations(st.session_state.processed_data)
         display_advanced_analytics(filtered_data)
+        display_time_series_analysis(filtered_data)
     
     else:
         st.error("The uploaded file could not be processed. Please try another file. 😔")
