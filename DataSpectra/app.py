@@ -26,7 +26,7 @@ with st.container(border=True):
     col1, col2 = st.columns([1, 2])
 
     with col1:
-        st.image("https://cdn-icons-png.flaticon.com/512/2991/2991108.png", width=200)
+        st.image("https://cdn-icons-png.flaticon.com/256/8242/8242984.png", width=250)
 
     with col2:
         uploaded_file = st.file_uploader(
